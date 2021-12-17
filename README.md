@@ -12,15 +12,17 @@
 ## Como instalar o Projeto
 ```
 Ao entrar na pasta do Projeto Rode o comando abaixo, e ele irá lhe entregar esse endereço abaixo 
-```
-- `http://localhost:8080`
-
-```
-Provavelmente poderá mudar o numero da porta se tiver algum projeto rodando.
-```
 
 ```
 npm install
+```
+
+
+Provavelmente poderá mudar o numero da porta se tiver algum projeto rodando.
+```
+```
+- `http://localhost:8080`
+
 ```
 
 ## Project setup
