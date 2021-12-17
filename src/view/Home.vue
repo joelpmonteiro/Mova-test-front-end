@@ -1,5 +1,10 @@
 <template>
   <v-app>
+    <div>
+      <v-alert shaped outlined type="success">
+        I'm a shaped alert with a outline option
+      </v-alert>
+    </div>
     <HeaderComponent />
 
     <v-main>
@@ -26,9 +31,9 @@
   </v-app>
 </template>
 <script>
-import HeaderComponent from "@/components/Header.vue";
-import SectionComponent from "@/components/Section.vue";
-import ContentComponent from "@/components/Content.vue";
+import HeaderComponent from "@/components/header/Header.vue";
+import SectionComponent from "@/components/section/Section.vue";
+import ContentComponent from "@/components/content/Content.vue";
 // import FooterComponent from "@/components/FooterPagination.vue";
 import axios from "../services/axios.js";
 import { mapMutations } from "vuex";

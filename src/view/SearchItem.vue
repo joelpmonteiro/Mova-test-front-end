@@ -17,6 +17,7 @@
               :length="pages"
               class="my-5"
               @input="updatePage"
+              color="#6d2080"
             ></v-pagination>
           </v-flex>
         </v-layout>
@@ -25,8 +26,8 @@
   </v-app>
 </template>
 <script>
-import HeaderComponent from "@/components/Header.vue";
-import ContentSearchComponent from "@/components/ContentSearch.vue";
+import HeaderComponent from "@/components/header/Header.vue";
+import ContentSearchComponent from "@/components/content/ContentSearch.vue";
 import { mapGetters } from "vuex";
 
 export default {
@@ -91,7 +92,13 @@ export default {
       this.initPage();
       this.updatePage(this.page);
     } catch (error) {
-      console.log(error);
+      this.$swal(
+        "Atenção",
+        "Erro no processo de busca, atualize a pagina e tente novamente!",
+        "warning"
+      ).then(() => {
+        this.$router.go(-1);
+      });
     }
 
     //Instacia Mounted
@@ -99,3 +106,8 @@ export default {
   created() {},
 };
 </script>
+<style lang="scss">
+.Blank_Footer {
+  background-color: #fff !important;
+}
+</style>
